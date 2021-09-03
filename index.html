@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>namma Bengaluru:upload image and location</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="stylling.css">
+  
+    <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color:#A6ACAF;
+
+    }
+    
+    
+    /* Add padding to containers */
+    .container {
+      border-radius: 5px;
+      background-color:#f2f2f2;
+      padding: 20px;
+    }
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] ,input[type=number],input[type=file]{
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+
+      background: #f2f2f2;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus ,input[type=number]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    
+    /* Set a style for the submit button */
+    .registerbtn {
+      background-color:#1A5276;
+      color: white;
+    
+      padding: 12px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      border-radius: 4px;
+    }
+    
+    .registerbtn:hover {
+
+      background-color: grey;
+
+      opacity: 1;
+    }
+    
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
+   
+  
+    </style>
+    </head>
+    <body>
+    <div class="header">
+    
+    <center><h1>NAMMA BENGALURU</h1></center>
+    <center><p> Lets stand together and make Bengaluru a Better place to live</p></center>
+    </div>
+
+    <div class="navbar">
+     <a href="hackhome.html">Home</a>
+     <a href="index.html" class="active">User</a>
+     <a href="hackvol.html">Volunteer</a>
+     <a href="publicuserregis.html">NGO</a>
+     <a href="#footerid" class="right">Contact us</a>
+     <a href="hackfeedback.html" class="right">Feedback</a>
+   </div>
+    
+    <form action="" method="post">
+        <h1 style="text-align: center; color:  #1A5276;  text-decoration: bolder"><i>UPLOAD IMAGE AND LOCATION</i></h1>
+        <p style="text-align: center">Please fill in this form to Upload</p>
+         <div class="container">
+
+
+       
+       <label for="aadhar"><b>Enter Aadhar no</b></label>
+        <input type="text" name="aadhar" id="aadhar"Required>
+        <label for="image"><b>Upload Image</b></label>
+        <input type="file" name="image" id="image"Required>
+
+       
+      
+
+        <hr>
+      
+  
+        <input type="submit" class="registerbtn"onclick="getLocation()" value="submit"/>
+      </div>
+      
+      
+    </form>
+
+    <div class="footer" id="footerid"><p style="text-decoration: underline;">CONTACT US</p><p>
+      <i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Bangalore,INDIA &nbsp&nbsp
+      <i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 91-9468425678 &nbsp&nbsp
+      <i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email:nammabengaluru@gmail.com</p>
+    </div>
+
+
+
+<script>
+  
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  alert(" The Position of the pothole at :Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude+" is sucessfully sumbitted");
+}
+
+</script>
+
+
+    </body>
+    </html>
